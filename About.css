@@ -1,0 +1,105 @@
+
+
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: aquamarine;
+    padding: 2rem 9%;
+    z-index: 100;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.logo{
+    font-size: 2.5rem;
+    color: black;
+}
+.navbar a{
+  font-size: 1.7rem;
+  margin-left: 2rem;
+  color: black;
+}
+
+.navbar a:hover{
+  color: blue;
+}
+#menu-btn{
+    font-size: 2.5rem;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px)
+{
+    .header{
+        padding: 2rem;
+    }
+    
+}
+@media (max-width:768px)
+{
+    #menu-btn{
+        display: initial;
+    }
+    .navbar{
+        position:absolute;
+        top: 115%;
+        right: -18rem;
+        width: 30rem;
+        border-radius: 0.5rem;
+        transform: scale(0);
+    opacity: 0;
+    transform-origin: top right;
+    transition: none;
+    }
+    .navbar.active{
+        transform: scale(1);
+        opacity: 1;
+        /* transform-origin: top right; */
+        transition: 0.2s ease-out; 
+    }
+    .navbar a{
+        display: block;
+    font-size: 2rem;
+    margin: 2.5rem;
+    }
+}
+@media (max-width:450px)
+{
+    .header{
+        padding: 2rem;
+    } 
+}
